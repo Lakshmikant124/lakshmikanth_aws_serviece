@@ -1,0 +1,68 @@
+git ec2 s3 
+
+
+S3 configuration :
+
+create amzon console acount 
+
+search s3 bucket serveices 
+
+go to s3 create bucket name with unique name 
+
+we can create folders inside bucket 
+
+upload file 
+
+go to permission ---> ACL's enable ---> save changes 
+
+go to properties --> go to   Static website hosting --> enable Static website hosting
+
+
+select the file --> click on actions ---> Make public using ACL
+
+if we want delete the bucket we need to delete the objects init first
+
+
+Django project with S3 bucket config:
+
+first we need to create one model with image and file feilds 
+in settings.py add these configurations:
+
+AWS_ACCESS_KEY_ID = 
+AWS_ACCESS_SECRETE_KEY = 
+AWS_STORAGE_BUCKET_NAME = 'lakshmikanth-s3'
+AWS_S3_SIGNATURE_NAME = 's3v4',
+AWS_S3_REGION_NAME = 'eu-north-1'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL =  None
+AWS_S3_VERIFY = True
+# STATIC_URL = 'https://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# # Media files (user uploads, etc.)
+# MEDIA_URL = 'https://%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage
+
+
+Generating AWS_ACCESS_KEY_ID and AWS_ACCESS_KEY:
+
+go to IAM serveice 
+click on 'Users'
+click on "create user"
+enter "username"
+select "Attach policies directly"  and search the s3 service select it , then click on next 
+create access key and secrete key 
+
+
+pip install boto3 and django-storages
+
+
+
+
+
+
+
+
+
+

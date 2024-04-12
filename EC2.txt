@@ -1,0 +1,47 @@
+pending ---- Signals and DB routers , types of models(inheritance model, proxy modles) Django orm documantaion, API gatway and load balancer ,Rivision(all django concepts,Assignement), Rivision(all python concepts) , Docker ,Ec2 instance ,
+docker 2 hrs of video and kong api gateway , Watch nginix video for beginners
+
+
+Deployement 
+
+1. first wee need create Ec2 instance 
+ 
+2. in project settings set Debug = False
+
+ALLOWED_HOSTS = ["*"]
+
+for example we got an error msg with database 
+so fronted team can't see that error msg . beacause in that table names are there 
+so we need set debug = false 
+and middle wares also used for this 
+
+
+
+
+we need to write logging file for project in settings
+
+the importnacse of logging is it's tells the behavior of the appliation and it's helps the resolve issues while running the project 
+
+creating logger 
+import logging 
+logger = loggin.getlogger(__name__)
+
+in our functions or viewsets: 
+   logger.info("")
+   logger.debug("")
+    logger.warn("")
+   logger.error
+
+3. install putty software 
+5. login with user,host,port,keyvalue
+6. write requirement.txt file in project folder 
+7. copy code into puttysoftwre 
+8. install required python version
+9. insatll setup tools : sudo yum install python3-pip
+10. install required dependincies : pip install -r requirement.txt
+before runserver we nee add one security group with custom and port number 8000
+11. runserver : make migrations , runserver at 0.0.0.0:8000
+
+IN this process I have faced one issue. for dependencies install i not able to install mysqlclient . execpt that all dependenies are installed 
+
+
